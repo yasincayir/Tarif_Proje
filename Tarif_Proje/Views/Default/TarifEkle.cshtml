@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "TarifEkle";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>TarifEkle</h2>
+
+<div class="container">
+
+    <div class="inner" style="margin-left:150px;width:800px">
+        <form method="post" class="form-group">
+            <div>
+                <h2 name="tarieklebaslik">Tarif Ekleme Sayfası</h2>
+                <br />
+                <label name="tarifeklead">Tarif Ad:</label>
+                <input type="text" name="AD" class="form-control" />
+                <br />
+                <label name="tarifeklemalzeme">Malzeme:</label>
+                <textarea name="MALZEME" class="form-control" rows="3"></textarea>
+                <br />
+                <label name="tarifekleyapilis">Yapılış:</label>
+                <textarea name="TARİF" class="form-control" rows="4"></textarea>
+                <br />
+                <label name="tarifekleiddegeri">ID Değeri:</label>
+                <input type="text" name="IdValue" class="form-control" />
+                <br />
+                <label name="tarifeklekategoriid">Kategori ID:</label>
+                <input type="text" name="KategoriID" class="form-control" />
+
+            </div>
+            <br />
+                <button name="tarifeklebuton" class="btn btn-outline-info">EKLE</button>
+        </form>
+    </div>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

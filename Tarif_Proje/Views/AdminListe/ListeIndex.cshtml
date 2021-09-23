@@ -1,0 +1,36 @@
+﻿
+@using Tarif_Proje.Models.EntityFramework
+@model List<Tbl_Yonetici>
+@{
+    ViewBag.Title = "ListeIndex";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="container">
+        <div class="inner" style="margin-left:150px;width:800px">
+            <br />
+            <h2>Admin Liste Paneli</h2>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Adminler</th>
+                </tr>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>@i.AD @i.SOYAD</td>
+                        
+                    </tr>
+
+                }
+
+            </table>
+        </div>
+    </div>
+    </div>
+<br /> <br /><br /> <br /><br /> <br /><br /> <br />
+
+
+
+
+

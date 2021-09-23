@@ -1,0 +1,35 @@
+﻿
+@using Tarif_Proje.Models.EntityFramework
+@model List<Tbl_Yemekler>
+@{
+    ViewBag.Title = "TarifDetay";
+    Layout = "~/Views/Shared/Ana_Layout.cshtml";
+}
+
+@foreach (var ymk in Model)
+{
+    <br />
+    <div style="width: 1000px;margin: 10px auto;">
+        <h2 style="text-align: center;">@ymk.AD</h2>
+        <hr />
+        <img src="@ymk.RESİM" style="width: 800px;;height: 350px;margin-left: 10%;border-radius: 10px;" alt="">
+        <br /><br />
+        <h3 name="tarifdmalzeme">MALZEMELER:</h3>
+        <p style="text-align: justify;font-family:Georgia, 'Times New Roman', Times, serif;">
+            @ymk.MALZEME
+        </p>
+        <h3 name="tarifdyapilis">YAPILIŞI:</h3>
+        <p style="text-align: justify;font-family:Georgia, 'Times New Roman', Times, serif;">
+            @ymk.TARİF
+        </p>
+        <hr />
+        <span style="font-style: italic;font-size: 20px;">@ymk.TARİH</span><span name="tarifdtarih"> Tarihinde Eklenmiştir.</span><br />
+        <span style="font-size: 25px; ">Puanı: 10 / @ymk.PUAN</span>
+        <hr />
+    </div>
+    <br />
+    <br />
+
+}
+
+

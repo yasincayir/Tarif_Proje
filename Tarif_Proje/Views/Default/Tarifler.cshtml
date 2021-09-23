@@ -1,0 +1,54 @@
+﻿
+@using Tarif_Proje.Models.EntityFramework
+@model List<Tbl_Yemekler>
+
+
+@{
+    ViewBag.Title = "Tarifler";
+    Layout = "~/Views/Shared/Ana_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifler</title>
+    <style>
+        a#foto:hover {
+            color: orangered;
+        }
+
+        img#img:hover {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <hr />
+    <h1 name="tarifler" style="background-color:darkorchid;color:white;text-align:center;border-radius:20px">TARİFLER</h1>
+    <hr><br>
+    <h4> <a name="filtre" style="text-decoration:none;margin-left:60px;width:auto;border:2px solid orange;background-color:orangered;color:whitesmoke;border-radius:20px" href="/Default/Kategoriler/">Kategoriye Göre Filtrele</a></h4>
+    <br />
+    @foreach (var ymk in Model)
+    {
+        <div style="width: 1000px;height: auto;margin: 0 auto;" class="container">
+            <a id="foto" href="/Default/YemekDetay/@ymk.IdValue" style="text-decoration:none;">
+                <h3 style="text-align: center;"> @ymk.AD</h3>
+                <img id="img" src="@ymk.RESİM" style="padding-left:0;width:50%;height:250px;border-radius:10px" alt="">
+            </a>
+            <p style="text-align: justify;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: large;">
+                <h3 namme="malzemeler">Malzemeler:</h3>
+                @ymk.MALZEME
+            </p>
+            <a name="devaminigör" href="/Default/YemekDetay/@ymk.IdValue">Devamını gör...</a>
+            <br>
+        </div>
+        <br />
+        <hr />
+
+    }
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic meta info
+    ==================== -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tatil Sitesi</title>
+
+    <!-- Favicon
+    ============ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="~/recipe/images/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="~/recipe/images/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="~/recipe/images/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="~/recipe/images/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="~/recipe/images/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="~/recipe/images/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="~/recipe/images/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="~/recipe/images/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="~/recipe/images/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="~/recipe/images/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/recipe/images/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/recipe/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="~/recipe/images/favicon/favicon-96x96.png" />
+
+    <!-- CSS files
+    ============== -->
+    <link rel="stylesheet" type="text/css" href="~/recipe/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/recipe/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/recipe/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/recipe/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/recipe/css/styles.css" />
+
+    <!-- Modernizr file
+    =================== -->
+    <script charset="utf-8" type="text/javascript " src="~/recipe/js/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Splash Screen
+    ================== -->
+    <div id="splash"></div>
+
+    <!-- Website Logo
+    ================= -->
+    <section id="logo">
+        <div class="container text-center wow pulse">
+            <img src="~/recipe/images/logo-white.svg" alt="logo" />
+            <br />
+            <h1 name="anabaslik">Tarif Sitesi</h1>
+        </div>
+    </section>
+
+    <!-- Recipes Categories
+    ======================= -->
+    <section style="background-color:antiquewhite;"  id="categories">
+        <div  class="container ml-25px">
+            <div  class="row wow zoomIn" style="padding-left:380px">
+                <!-- Anasayfa - Category Item -->
+                <div  class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <div class="category-item text-center">
+                        <a name="anasayfa" href="/Default/Index/" style = "text-decoration:none;color:white;" >
+                            <img src="~/recipe/images/icons/home.png" alt="milk" width="48" height="48" />
+                            <br />
+                            Anasayfa
+                        </a>
+                    </div>
+                </div>
+                <!-- Tarifler - Category Item -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <div class="category-item text-center">
+                        <a name="tarifler" href="/Default/Tarifler/" style="text-decoration:none;color:white;">
+
+                            <img src="~/recipe/images/icons/chef.png" alt="meat" width="48" height="48" />
+                            <br />
+                            Tarifler
+                        </a>
+                    </div>
+                </div>
+                <!-- Tarif Detay - Category Item -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <div class="category-item text-center">
+                        <a name="tarifdetay" href="/Default/TarifDetay/" style="text-decoration:none;color:white;">
+
+                            <img src="~/recipe/images/icons/resume.png" alt="fish" width="48" height="48" />
+                            <br />
+                            Tarif Detay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: whitesmoke; border-top-left-radius: 20px; border-top-right-radius: 20px" class="container">
+            @RenderBody()
+        </div>
+    </section>
+
+    <!-- Website Footer
+    =================== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-md-6 col-sm-12 text-center">
+                    <h3>About</h3>
+                    <div name="hakkimizda" class="footer-about">
+                        "A recipe book is one that you use daily and what we in our family
+                        call 'a living book' — a book that you use all the time,
+                        not just read once and discard on the shelf.
+                        Recipes are by nature derivative and meant to be shared -
+                        that is how they improve, are changed, how new ideas are formed. ”
+                    </div>
+                </div>
+                <!-- Author -->
+                <div class="col-md-6 col-sm-12 text-center">
+                    <div class="footer-author">
+                        Made with
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                        love by
+                        <a href="https://jraleman.com/" target="_blank">Jose Ramon</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript files
+    ===================== -->
+    <script charset="utf-8" src="~/recipe/js/jquery-3.3.1.min.js"></script>
+    <script charset="utf-8" src="~/recipe/js/bootstrap.min.js"></script>
+    <script charset="utf-8" src="~/recipe/js/wow.min.js"></script>
+    <script charset="utf-8" src="~/recipe/js/scripts.js"></script>
+</body>
+
+</html>
+

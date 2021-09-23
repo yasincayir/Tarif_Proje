@@ -1,0 +1,45 @@
+﻿
+@model Tarif_Proje.Models.EntityFramework.Tbl_Yemekler
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="container">
+        <div class="inner" style="margin-left:150px;width:800px">
+            <br />
+            <h2>Güncelleme Sayfası</h2>
+            @using (Html.BeginForm("YemekGuncelle", "Admin", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(i => i.AD)
+                    @Html.TextBoxFor(i => i.AD, new { @class = "form-control" })
+                    @Html.HiddenFor(i => i.ID)
+                    <br />
+                    @Html.LabelFor(i => i.MALZEME)
+                    @Html.TextAreaFor(i => i.MALZEME, new { @class = "form-control" })
+                    @Html.HiddenFor(i => i.ID)
+
+                    <br />
+                    @Html.LabelFor(i => i.TARİF)
+                    @Html.TextAreaFor(i => i.TARİF, new { @class = "form-control" })
+                    @Html.HiddenFor(i => i.ID)
+
+                    <br />
+                    @Html.LabelFor(i => i.IdValue)
+                    @Html.TextBoxFor(i => i.IdValue, new { @class = "form-control" })
+                    @Html.HiddenFor(i => i.ID)
+
+                    <br />
+
+                </div>
+                <button class="btn btn-outline-success">Güncelle</button>
+
+            }
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+    </div>
+</div>
+<br /><br />

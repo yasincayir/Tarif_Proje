@@ -1,0 +1,48 @@
+﻿
+
+@using Tarif_Proje.Models.EntityFramework
+@model List<Tbl_Kategoriler>
+@{
+    ViewBag.Title = "Kategoriler";
+    Layout = "~/Views/Shared/Ana_Layout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .Kategoritur:hover {
+            color: orangered;
+        }
+
+        .Kategoritur {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <table class="table table-bordered">
+      <tr>
+          <th hidden>ID</th>
+          <th>KATEGORİ ADI</th>
+          <th>DETAY</th>
+      </tr>
+      <tbody>
+          @foreach (var i in Model)
+          {
+              <tr>
+                  <td hidden>@i.ID</td>
+                  <td>@i.AD</td>
+                  <td><a href="/Default/KategoriDetay/@i.ID" class="btn btn-primary">Detaylar</a></td>
+              </tr>
+
+          }
+      </tbody>
+    </table>
+</body>
+</html>

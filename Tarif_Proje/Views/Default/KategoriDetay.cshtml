@@ -1,0 +1,25 @@
+﻿
+@using Tarif_Proje.Models.EntityFramework
+@model List<Tbl_Yemekler>
+@{
+    ViewBag.Title = "KategoriDetay";
+    Layout = "~/Views/Shared/Ana_Layout.cshtml";
+}
+
+@foreach (var ymk in Model)
+{
+    <br />
+    <div style="width: 1000px;margin: 10px auto;">
+        <h2 style="text-align: center;">@ymk.AD</h2>
+        <hr />
+        <a href="/Default/Index/">
+            <img src="@ymk.RESİM" style="width: 800px;;height: 350px;margin-left: 10%;border-radius: 10px;" alt="">
+        </a>
+        <br /><br />
+         <hr />
+    </div>
+    <br />
+    <br />
+}
+
+

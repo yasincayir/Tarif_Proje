@@ -1,0 +1,41 @@
+﻿@using Tarif_Proje.Models.EntityFramework
+@model List<Tbl_Yemekler>
+@{
+    ViewBag.Title = "AdminIndex";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="container">
+        <div class="inner" style="margin-left:150px;width:800px">
+            <br />
+            <h2>Kontrol Paneli</h2>
+            <a href="/Default/TarifEkle/" class="btn btn-primary">Yeni Tarif Ekle</a>
+            <a href="/Default/Index/" class="btn btn-info">Siteye Git</a>
+            <br /><br />
+            <table class="table table-bordered">
+                <tr>
+                    <th>Yiyecek ve İçecekler</th>
+                    <th>GÜNCELLE</th>
+                    <th>SİL</th>
+                    <th>Detay</th>
+                </tr>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>@i.AD</td>
+                        <td><a href="/Admin/Guncelle/@i.ID" class="btn btn-success">GÜNCELLE</a></td>
+                        <td><a href="/Admin/Sil/@i.ID" class="btn btn-danger">SİL</a></td>
+                        <td><a href="/Default/YemekDetay/@i.IdValue" class="btn  btn-primary">DETAYLAR</a></td>
+                    </tr>
+
+                }
+
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+    </div>
+</div>
+
+
